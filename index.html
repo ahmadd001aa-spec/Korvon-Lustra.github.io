@@ -1,0 +1,3097 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>KORVON LUSTRA • Мағозаи премиумии рӯшноӣ</title>
+  <meta name="description" content="Мағозаи муосири рӯшноӣ: люстраҳо, чарогиҳо, лампочкаҳо, лентаҳои LED. Расонидан дар шаҳр. Фармоиш тавассути WhatsApp ва Telegram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ==== CSS ПЕРЕМЕННЫЕ (ТЁМНАЯ ТЕМА ПО УМОЛЧАНИЮ) ==== */
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #141414;
+      --bg-card: #1e1e1e;
+      --text-primary: #f5f5f5;
+      --text-secondary: #b0b0b0;
+      --accent: #f5b342;
+      --accent-hover: #ffc55c;
+      --border-light: rgba(255,255,255,0.08);
+      --shadow: 0 20px 35px -8px rgba(0,0,0,0.7);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --transition: all 0.25s ease;
+    }
+
+    body.light-theme {
+      --bg-primary: #f9f9f9;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a;
+      --border-light: rgba(0,0,0,0.08);
+      --shadow: 0 20px 35px -8px rgba(0,0,0,0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    button, .btn { cursor: pointer; border: none; background: none; font-family: inherit; transition: var(--transition); }
+
+    .container { width: min(1280px, 92%); margin: 0 auto; }
+
+    h1, h2, h3, h4 { font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 1rem; }
+
+    .section-title { text-align: center; margin-bottom: 3rem; }
+    .section-title span { color: var(--accent); }
+
+    /* ==== КНОПКИ ==== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.9rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--accent); color: #0a0a0a; }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(245, 179, 66, 0.3); }
+    .btn-outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
+    .btn-outline:hover { background: var(--accent); color: #0a0a0a; transform: translateY(-2px); }
+    .btn-sm { padding: 0.6rem 1.4rem; font-size: 0.9rem; }
+
+    /* ==== HEADER ==== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.8rem 0;
+      transition: background 0.3s ease;
+    }
+    body.light-theme .header { background: rgba(255, 255, 255, 0.85); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .logo span { color: var(--accent); }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+    }
+    .nav a {
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .nav a:hover, .nav a.active { color: var(--accent); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+    }
+    .social-icons a {
+      color: var(--text-secondary);
+      font-size: 1.25rem;
+      transition: var(--transition);
+    }
+    .social-icons a:hover { transform: scale(1.12); }
+
+    .ico-wa:hover { color: #25D366 !important; }
+    .ico-tg:hover { color: #0088cc !important; }
+    .ico-ig:hover { color: #E1306C !important; }
+    .ico-ph:hover { color: var(--accent) !important; }
+
+    .cart-icon {
+      position: relative;
+      font-size: 1.35rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .cart-icon:hover { color: var(--accent); }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -12px;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      transition: var(--transition);
+    }
+    .theme-toggle:hover { border-color: var(--accent); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: 5px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.5rem;
+      z-index: 999;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: var(--shadow);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 1.1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-primary);
+    }
+
+    /* ==== HERO ==== */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('IMAGE_HERO_HERE') center/cover no-repeat;
+      background-color: #1a1a1a;
+      padding: 4rem 1rem;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      color: #e0e0e0;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .hero-info {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+    .fade-up-delay-1 { animation-delay: 0.2s; }
+    .fade-up-delay-2 { animation-delay: 0.4s; }
+    .fade-up-delay-3 { animation-delay: 0.6s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    section { padding: 5rem 0; }
+
+    /* ==== КАТАЛОГ ==== */
+    .catalog-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .search-wrapper {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .search-wrapper i {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-secondary);
+    }
+    .search-input {
+      width: 100%;
+      padding: 1rem 1rem 1rem 3rem;
+      border-radius: 60px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    .search-input:focus { outline: none; border-color: var(--accent); }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+    .cat-btn {
+      padding: 0.6rem 1.4rem;
+      border-radius: 60px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .cat-btn:hover, .cat-btn.active {
+      background: var(--accent);
+      color: #0a0a0a;
+      border-color: var(--accent);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-light);
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+    .product-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: #2a2a2a;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img img { transform: scale(1.05); }
+    .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 60px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge.badge-hit {
+      background: #e74c3c;
+      color: #fff;
+    }
+    .product-body {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-body h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .product-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .product-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .price-old {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: line-through;
+      margin-left: 0.4rem;
+      font-weight: 400;
+    }
+    .order-btn {
+      background: var(--accent);
+      color: #0a0a0a;
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .order-btn:hover { background: var(--accent-hover); transform: scale(1.02); }
+
+    /* ==== РАСОНИДАН ==== */
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .delivery-card {
+      background: var(--bg-card);
+      padding: 1.8rem 1.2rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+    .delivery-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .delivery-card i { font-size: 2rem; color: var(--accent); margin-bottom: 0.8rem; }
+    .delivery-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .delivery-card p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    /* ==== ДАР БОРАИ МО ==== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #2a2a2a;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 2rem;
+    }
+    .about-text h2 { margin-bottom: 1rem; }
+    .about-text p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .advantages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .advantage-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+    }
+    .advantage-item i { color: var(--accent); font-size: 1.1rem; width: 20px; }
+
+    /* ==== ЧӢ ТАВР ФАРМОИШ ==== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .step-card {
+      background: var(--bg-card);
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+    .step-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .step-number {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ==== ТАМОС ==== */
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-card);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+    .contact-item:hover { border-color: var(--accent); }
+    .contact-item i { font-size: 1.8rem; color: var(--accent); width: 40px; text-align: center; }
+    .contact-item a { font-weight: 500; word-break: break-word; }
+    .contact-item.ci-wa i { color: #25D366; }
+    .contact-item.ci-tg i { color: #0088cc; }
+    .contact-item.ci-ig i { color: #E1306C; }
+
+    /* ==== ХАРИТА ==== */
+    .map-placeholder {
+      width: 100%;
+      height: 300px;
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      border: 1px dashed var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ==== INSTAGRAM ==== */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .insta-item {
+      aspect-ratio: 1;
+      border-radius: var(--radius-sm);
+      background: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      overflow: hidden;
+      position: relative;
+      transition: var(--transition);
+    }
+    .insta-item:hover { transform: scale(1.03); }
+
+    /* ==== ШАРҲҲО ==== */
+    .reviews-slider {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 1rem 0 2rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .review-card {
+      min-width: 300px;
+      flex: 1 0 300px;
+      scroll-snap-align: start;
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
+    .review-stars { color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem; }
+    .review-text { font-style: italic; margin-bottom: 1rem; color: var(--text-secondary); }
+    .review-name { font-weight: 600; }
+    .slider-controls { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .slider-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    .slider-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ==== АКСИЯ ==== */
+    .promo-card {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      border: 2px solid var(--accent);
+      flex-wrap: wrap;
+    }
+    .promo-img {
+      width: 180px;
+      height: 180px;
+      border-radius: var(--radius-sm);
+      background: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+    .promo-info h3 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .promo-price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0.5rem 0;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      padding: 4rem 0 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .footer-col h4 { margin-bottom: 1rem; font-size: 1.1rem; }
+    .footer-col p, .footer-col a {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      transition: var(--transition);
+    }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-social { display: flex; gap: 1rem; margin-top: 1rem; }
+    .footer-social a { font-size: 1.4rem; }
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* ==== МОДАЛ ==== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      max-width: 500px;
+      width: 100%;
+      padding: 2rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .modal-close:hover { color: var(--accent); }
+    .modal-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      background: #2a2a2a;
+    }
+    .modal h3 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+    .modal-price { font-size: 1.3rem; color: var(--accent); font-weight: 700; margin-bottom: 1rem; }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .quantity-selector button {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      transition: var(--transition);
+    }
+    .quantity-selector button:hover { border-color: var(--accent); color: var(--accent); }
+    .quantity-selector span {
+      font-size: 1.5rem;
+      font-weight: 600;
+      min-width: 40px;
+      text-align: center;
+    }
+    .modal-total { text-align: center; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .modal-actions { display: flex; flex-direction: column; gap: 0.8rem; }
+
+    .btn-whatsapp { background: #25D366; color: #fff; }
+    .btn-whatsapp:hover { background: #20b859; }
+    .btn-telegram { background: #0088cc; color: #fff; }
+    .btn-telegram:hover { background: #0077b3; }
+
+    /* ==== САБАД ==== */
+    .cart-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 420px;
+      height: 100vh;
+      background: var(--bg-secondary);
+      border-left: 1px solid var(--border-light);
+      z-index: 1500;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+    .cart-panel.open { transform: translateX(0); }
+    .cart-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-header h3 { font-size: 1.3rem; }
+    .cart-close {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .cart-close:hover { color: var(--accent); }
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .cart-item {
+      display: flex;
+      gap: 1rem;
+      background: var(--bg-card);
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
+    .cart-item-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #2a2a2a;
+      flex-shrink: 0;
+    }
+    .cart-item-info { flex: 1; }
+    .cart-item-info h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+    .cart-item-info .cart-item-price { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+    .cart-item-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+    .cart-item-actions button {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cart-item-remove {
+      color: #ff5555;
+      font-size: 1.1rem;
+      margin-left: auto;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .cart-item-remove:hover { color: #ff2222; }
+    .cart-footer {
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .cart-total span:last-child { color: var(--accent); }
+
+    /* ==== АДАПТИВ ==== */
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .hamburger { display: flex; }
+      .header-actions .social-icons { display: none; }
+      .hero { min-height: 80vh; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .promo-card { flex-direction: column; text-align: center; }
+      .advantages { grid-template-columns: 1fr; }
+
+      /* ☀️ 2 ФОТО — каталог */
+      .products-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.8rem !important;
+      }
+      .product-body { padding: 0.9rem !important; }
+      .product-body h3 { font-size: 0.92rem !important; }
+      .product-desc { font-size: 0.75rem !important; margin-bottom: 0.6rem !important; }
+      .price { font-size: 0.95rem !important; }
+      .price-old { font-size: 0.7rem !important; }
+      .order-btn { padding: 0.4rem 0.9rem !important; font-size: 0.72rem !important; }
+      .badge { font-size: 0.58rem !important; padding: 0.25rem 0.55rem !important; }
+
+      /* ☀️ 2 ФОТО — instagram */
+      .insta-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.6rem !important;
+      }
+
+      /* ☀️ 2 ФОТО — шарҳҳо */
+      .review-card {
+        min-width: calc(50% - 0.5rem) !important;
+        flex: 1 0 calc(50% - 0.5rem) !important;
+        padding: 1.2rem !important;
+      }
+      .review-text { font-size: 0.82rem !important; }
+      .review-name { font-size: 0.9rem !important; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 280px; }
+      .cart-panel { max-width: 100%; }
+
+      .products-grid { gap: 0.6rem !important; }
+      .product-body { padding: 0.7rem !important; }
+      .product-body h3 { font-size: 0.82rem !important; }
+      .price { font-size: 0.9rem !important; }
+    }
+
+    .hidden { display: none !important; }
+    .text-center { text-align: center; }
+    .mt-2 { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" id="logo">KORVON <span>LUSTRA</span></a>
+
+      <nav>
+        <ul class="nav">
+          <li><a href="#home" class="active">Асосӣ</a></li>
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#about">Дар бораи мо</a></li>
+          <li><a href="#delivery">Расонидан</a></li>
+          <li><a href="#contacts">Тамос</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="social-icons">
+          <a href="#" target="_blank" aria-label="Instagram" class="ico-ig" id="header-instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" target="_blank" aria-label="Telegram" class="ico-tg" id="header-telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="#" target="_blank" aria-label="WhatsApp" class="ico-wa" id="header-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="tel:+992123456789" aria-label="Занг задан" class="ico-ph" id="header-phone">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+        </div>
+
+        <a href="#" class="cart-icon" id="cartIcon" aria-label="Сабад">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Иваз кардани мавзӯъ">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Асосӣ</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#about">Дар бораи мо</a>
+    <a href="#delivery">Расонидан</a>
+    <a href="#contacts">Тамос</a>
+    <div class="social-icons" style="margin-top: 1rem; justify-content: center;">
+      <a href="#" aria-label="Instagram" class="ico-ig" id="mobile-instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Telegram" class="ico-tg" id="mobile-telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="#" aria-label="WhatsApp" class="ico-wa" id="mobile-whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+992123456789" aria-label="Занг задан" class="ico-ph" id="mobile-phone"><i class="fas fa-phone-alt"></i></a>
+    </div>
+  </div>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="fade-up">Рӯшноӣ, ки <span>фазоро тағйир медиҳад</span></h1>
+        <p class="fade-up fade-up-delay-1">Люстраҳо, чарогиҳо ва ҳалли муосири рӯшноӣ барои хонаи шумо. Нури гарм, тарҳи бекам-у-кост, сифати баланд.</p>
+        <div class="hero-buttons fade-up fade-up-delay-2">
+          <a href="#catalog" class="btn btn-primary"><i class="fas fa-lightbulb"></i> Дидани каталог</a>
+          <button class="btn btn-outline" id="heroOrderBtn"><i class="fas fa-shopping-cart"></i> Фармоиш</button>
+        </div>
+        <div class="hero-info fade-up fade-up-delay-3">
+          <span><i class="fas fa-clock"></i> Ҳар рӯз 09:00 – 20:00</span>
+          <span><i class="fas fa-map-pin"></i> ш. Душанбе, кӯчаи Рӯдакӣ 45</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section id="catalog">
+      <div class="container">
+        <div class="section-title">
+          <h2>Каталоги <span>мо</span></h2>
+          <p>Чарогиро ба табъи худ интихоб кунед — аз люстраҳои классикӣ то ҳалли муосири LED</p>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" class="search-input" id="searchInput" placeholder="Ҷустуҷӯи мол...">
+          </div>
+          <div class="categories" id="categoriesContainer"></div>
+          <div class="filters" id="filtersContainer">
+            <button class="filter-btn active" data-filter="all">Ҳама</button>
+            <button class="filter-btn" data-filter="popular">Машҳур</button>
+            <button class="filter-btn" data-filter="new">Навҳо</button>
+            <button class="filter-btn" data-filter="cheap">Арзон</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- РАСОНИДАН -->
+    <section id="delivery" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title">
+          <h2>Расонидани <span>зуд</span></h2>
+        </div>
+        <div class="delivery-grid">
+          <div class="delivery-card">
+            <i class="fas fa-truck"></i>
+            <h3>🚚 Расонидани зуд</h3>
+            <p>Аз 30 дақиқа дар шаҳр</p>
+          </div>
+          <div class="delivery-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>📍 Дар тамоми шаҳр</h3>
+            <p>Ҳамаи ноҳияҳои Душанбе</p>
+          </div>
+          <div class="delivery-card">
+            <i class="fas fa-hourglass-half"></i>
+            <h3>⏱ Вақти расонидан</h3>
+            <p>45–60 дақиқа</p>
+          </div>
+          <div class="delivery-card">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>💰 Нарх</h3>
+            <p>Ройгон аз 500 сомонӣ</p>
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <button class="btn btn-primary" id="deliveryOrderBtn"><i class="fas fa-truck"></i> Фармоиши расонидан</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ДАР БОРАИ МО -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Дар бораи <span>мо</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-img">
+            <span>IMAGE_ABOUT_HERE<br>(сурати мағоза)</span>
+          </div>
+          <div class="about-text">
+            <h2>Нуре, ки илҳом мебахшад</h2>
+            <p>KORVON LUSTRA — мағозаи премиумии рӯшноӣ. Мо аз соли 2018 кор мекунем ва ифтихор дорем, ки ба эҷоди бароҳатӣ ва фазои гарм дар ҳар хона кӯмак мекунем.</p>
+            <p>Мо танҳо чарогиҳои сифатнокро аз истеҳсолкунандагони боэътимод пешниҳод мекунем: люстраҳо, бра, торшерҳо, лентаҳои LED ва ғайра.</p>
+            <div class="advantages">
+              <div class="advantage-item"><i class="fas fa-lightbulb"></i> Интихоби калон</div>
+              <div class="advantage-item"><i class="fas fa-shield-alt"></i> Кафолат</div>
+              <div class="advantage-item"><i class="fas fa-truck"></i> Расонидан</div>
+              <div class="advantage-item"><i class="fas fa-headset"></i> Машварат</div>
+              <div class="advantage-item"><i class="fas fa-check-circle"></i> Санҷиши мол</div>
+              <div class="advantage-item"><i class="fas fa-star"></i> Хидмати сифатнок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЧӢ ТАВР ФАРМОИШ -->
+    <section style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title">
+          <h2>Чӣ тавр <span>фармоиш диҳем?</span></h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Молро интихоб кунед</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Аз каталоги мо</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Ба сабад илова кунед</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Миқдорро нишон диҳед</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Фармоишро тасдиқ кунед</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Тугмаро пахш кунед</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Бо мо тамос гиред</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">WhatsApp / Telegram</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТАМОС -->
+    <section id="contacts">
+      <div class="container">
+        <div class="section-title">
+          <h2>Тамос</h2>
+        </div>
+        <div class="contacts-grid">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+992123456789" id="contact-phone">+992 123 45 67 89</a>
+          </div>
+          <div class="contact-item ci-wa">
+            <i class="fab fa-whatsapp"></i>
+            <a href="#" target="_blank" id="contact-whatsapp">WhatsApp</a>
+          </div>
+          <div class="contact-item ci-tg">
+            <i class="fab fa-telegram-plane"></i>
+            <a href="#" target="_blank" id="contact-telegram">Telegram</a>
+          </div>
+          <div class="contact-item ci-ig">
+            <i class="fab fa-instagram"></i>
+            <a href="#" target="_blank" id="contact-instagram">Instagram</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-pin"></i>
+            <span>ш. Душанбе, кӯчаи Рӯдакӣ 45</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Ҳар рӯз 09:00 – 20:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ХАРИТА -->
+    <section style="padding-top: 0;">
+      <div class="container">
+        <div class="section-title">
+          <h2>Мо дар <span>ин ҷо ҳастем</span></h2>
+        </div>
+        <div class="map-placeholder">
+          <span>🗺️ MAP_PLACEHOLDER — харитаро дар ин ҷо гузоред</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title">
+          <h2>Мо дар <span>Instagram</span></h2>
+        </div>
+        <div class="insta-grid">
+          <div class="insta-item">IMAGE_INSTA_1</div>
+          <div class="insta-item">IMAGE_INSTA_2</div>
+          <div class="insta-item">IMAGE_INSTA_3</div>
+          <div class="insta-item">IMAGE_INSTA_4</div>
+          <div class="insta-item">IMAGE_INSTA_5</div>
+          <div class="insta-item">IMAGE_INSTA_6</div>
+        </div>
+        <div class="text-center">
+          <a href="#" target="_blank" class="btn btn-primary" id="instaBtn"><i class="fab fa-instagram"></i> Гузаштан ба Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ШАРҲҲО -->
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Шарҳҳои <span>харидорон</span></h2>
+        </div>
+        <div class="reviews-slider" id="reviewsSlider"></div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevReview" aria-label="Шарҳи қаблӣ"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn" id="nextReview" aria-label="Шарҳи навбатӣ"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- АКСИЯ -->
+    <section style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-title">
+          <h2><span>Аксия</span></h2>
+        </div>
+        <div class="promo-card">
+          <div class="promo-img">
+            <span>IMAGE_PROMO_HERE</span>
+          </div>
+          <div class="promo-info">
+            <h3>Люстра + лампаи LED тӯҳфа</h3>
+            <p style="color: var(--text-secondary);">Пешниҳоди махсус барои харидорони мо</p>
+            <div class="promo-price">1 999 сомонӣ</div>
+            <button class="btn btn-primary" id="promoOrderBtn"><i class="fas fa-shopping-cart"></i> Фармоиш</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="logo">KORVON <span>LUSTRA</span></h4>
+          <p>Мағозаи премиумии рӯшноӣ. Люстраҳо, чарогиҳо, лампочкаҳо ва ҳалли LED.</p>
+          <div class="footer-social">
+            <a href="#" target="_blank" aria-label="Instagram" class="ico-ig" id="footer-instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="Telegram" class="ico-tg" id="footer-telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" target="_blank" aria-label="WhatsApp" class="ico-wa" id="footer-whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+992123456789" aria-label="Занг задан" class="ico-ph" id="footer-phone"><i class="fas fa-phone-alt"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Навигатсия</h4>
+          <a href="#home">Асосӣ</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#about">Дар бораи мо</a>
+          <a href="#delivery">Расонидан</a>
+          <a href="#contacts">Тамос</a>
+        </div>
+        <div class="footer-col">
+          <h4>Тамос</h4>
+          <p>ш. Душанбе, кӯчаи Рӯдакӣ 45</p>
+          <p>+992 123 45 67 89</p>
+          <p>Ҳар рӯз 09:00 – 20:00</p>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 KORVON LUSTRA. Ҳамаи ҳуқуқҳо ҳифз шудаанд.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= МОДАЛ ================= -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="orderModal">
+      <button class="modal-close" id="modalClose" aria-label="Пӯшидан"><i class="fas fa-times"></i></button>
+      <img src="" alt="Сурати мол" class="modal-img" id="modalImg">
+      <h3 id="modalTitle">Ном</h3>
+      <div class="modal-price" id="modalPrice">0 сомонӣ</div>
+      <div class="quantity-selector">
+        <button id="qtyMinus" aria-label="Кам кардан">−</button>
+        <span id="qtyValue">1</span>
+        <button id="qtyPlus" aria-label="Зиёд кардан">+</button>
+      </div>
+      <div class="modal-total" id="modalTotal">Ҳамагӣ: 0 сомонӣ</div>
+      <div class="modal-actions">
+        <button class="btn btn-whatsapp" id="orderWhatsApp"><i class="fab fa-whatsapp"></i> Фармоиш тавассути WhatsApp</button>
+        <button class="btn btn-telegram" id="orderTelegram"><i class="fab fa-telegram-plane"></i> Фармоиш тавассути Telegram</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= САБАД ================= -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3>Сабад</h3>
+      <button class="cart-close" id="cartClose" aria-label="Пӯшидани сабад"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Ҳамагӣ:</span>
+        <span id="cartTotal">0 сомонӣ</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" id="checkoutBtn"><i class="fas fa-check"></i> Тасдиқи фармоиш</button>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // ============================================================
+    // 1. CONFIG — ТАНЗИМОТИ МАҒОЗА
+    // ============================================================
+    const CONFIG = {
+      shopName: 'KORVON LUSTRA',
+      phone: '+992123456789',
+      phoneDisplay: '+992 123 45 67 89',
+      whatsapp: 'https://wa.me/992123456789',
+      telegram: 'https://t.me/korvon_lustra',
+      instagram: 'https://instagram.com/korvon_lustra',
+      address: 'ш. Душанбе, кӯчаи Рӯдакӣ 45',
+      workingHours: 'Ҳар рӯз 09:00 – 20:00',
+    };
+
+    // ============================================================
+    // 2. PRODUCTS — МОЛҲО
+    // ============================================================
+    const PRODUCTS = [
+      {
+        id: 1,
+        name: 'Люстраи Modern Ring',
+        description: 'Люстраи муосир бо ҳалқаи металлӣ ва нури гарм',
+        price: 1850,
+        oldPrice: 2200,
+        category: 'chandeliers',
+        categoryName: 'Люстраҳо',
+        image: 'images/chandelier1.jpg',
+        popular: true,
+        new: false,
+      },
+      {
+        id: 2,
+        name: 'Люстраи Crystal Gold',
+        description: 'Люстраи боҳашамати кристаллӣ бо ороиши тиллоӣ',
+        price: 4200,
+        oldPrice: null,
+        category: 'chandeliers',
+        categoryName: 'Люстраҳо',
+        image: 'images/chandelier2.jpg',
+        popular: true,
+        new: true,
+      },
+      {
+        id: 3,
+        name: 'Люстраи Minimal Black',
+        description: 'Люстраи минималистӣ сиёҳ барои интерьери муосир',
+        price: 2400,
+        oldPrice: 2900,
+        category: 'chandeliers',
+        categoryName: 'Люстраҳо',
+        image: 'images/chandelier3.jpg',
+        popular: false,
+        new: true,
+      },
+      {
+        id: 4,
+        name: 'Чарогии шифтии LED',
+        description: 'Чарогии сарфаи энергия барои шифт',
+        price: 620,
+        oldPrice: 780,
+        category: 'ceiling',
+        categoryName: 'Чарогиҳои шифтӣ',
+        image: 'images/ceiling1.jpg',
+        popular: true,
+        new: false,
+      },
+      {
+        id: 5,
+        name: 'Чарогии шифтии Smart',
+        description: 'Чарогии зиракона бо идоракунӣ аз смартфон',
+        price: 890,
+        oldPrice: null,
+        category: 'ceiling',
+        categoryName: 'Чарогиҳои шифтӣ',
+        image: 'images/ceiling2.jpg',
+        popular: false,
+        new: true,
+      },
+      {
+        id: 6,
+        name: 'Плафони Round White',
+        description: 'Плафони классикии сафед аз шишаи матовӣ',
+        price: 340,
+        oldPrice: null,
+        category: 'shades',
+        categoryName: 'Плафонҳо',
+        image: 'images/shade1.jpg',
+        popular: false,
+        new: false,
+      },
+      {
+        id: 7,
+        name: 'Чарогии нуқтагии Premium',
+        description: 'Чарогии гардишӣ бо бадани алюминий',
+        price: 85,
+        oldPrice: 120,
+        category: 'spot',
+        categoryName: 'Чарогиҳои нуқтагӣ',
+        image: 'images/spot1.jpg',
+        popular: true,
+        new: false,
+      },
+      {
+        id: 8,
+        name: 'Чарогии LED Smart',
+        description: 'Чарогии зираконаи LED бо равшании RGB',
+        price: 890,
+        oldPrice: null,
+        category: 'led',
+        categoryName: 'Чарогиҳои LED',
+        image: 'images/led1.jpg',
+        popular: true,
+        new: true,
+      },
+      {
+        id: 9,
+        name: 'Лампаи LED 12W',
+        description: 'Лампаи сарфаи энергия бо нури гарм',
+        price: 45,
+        oldPrice: 65,
+        category: 'bulbs',
+        categoryName: 'Лампочкаҳо',
+        image: 'images/bulb1.jpg',
+        popular: true,
+        new: false,
+      },
+      {
+        id: 10,
+        name: 'Галогени High-Tech',
+        description: 'Лампаи галогенӣ бо равшании баланд',
+        price: 95,
+        oldPrice: 130,
+        category: 'bulbs',
+        categoryName: 'Лампочкаҳо',
+        image: 'images/bulb2.jpg',
+        popular: false,
+        new: false,
+      },
+      {
+        id: 11,
+        name: 'Браи девории Gold',
+        description: 'Браи зебо бо ороиши тиллоӣ ва абажури матоӣ',
+        price: 450,
+        oldPrice: 550,
+        category: 'sconces',
+        categoryName: 'Бра',
+        image: 'images/sconce1.jpg',
+        popular: true,
+        new: false,
+      },
+      {
+        id: 12,
+        name: 'Торшери Modern',
+        description: 'Торшери услубӣ бо асоси металлӣ',
+        price: 980,
+        oldPrice: null,
+        category: 'floor',
+        categoryName: 'Торшерҳо',
+        image: 'images/floor1.jpg',
+        popular: false,
+        new: true,
+      },
+      {
+        id: 13,
+        name: 'Лампаи мизи Classic',
+        description: 'Лампаи классикии мизи корӣ бо нури гарм',
+        price: 380,
+        oldPrice: 480,
+        category: 'table',
+        categoryName: 'Лампаҳои мизи корӣ',
+        image: 'images/table1.jpg',
+        popular: true,
+        new: false,
+      },
+      {
+        id: 14,
+        name: 'Лентаи LED 5 м',
+        description: 'Лентаи чандири RGB бо пулти идоракунӣ',
+        price: 180,
+        oldPrice: null,
+        category: 'strips',
+        categoryName: 'Лентаҳои LED',
+        image: 'images/strip1.jpg',
+        popular: false,
+        new: true,
+      },
+      {
+        id: 15,
+        name: 'Прожектори LED 50W',
+        description: 'Прожектори кӯчагии пурқуввати LED',
+        price: 320,
+        oldPrice: 400,
+        category: 'flood',
+        categoryName: 'Прожекторҳо',
+        image: 'images/flood1.jpg',
+        popular: false,
+        new: false,
+      },
+      {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+      
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+        {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+         {
+        id: 16,
+        name: 'Чарогии трекии 3-фазӣ',
+        description: 'Чарогии касбии трекӣ барои галереяҳо',
+        price: 280,
+        oldPrice: null,
+        category: 'track',
+        categoryName: 'Чарогиҳои трекӣ',
+        image: 'images/track1.jpg',
+        popular: false,
+        new: true,
+      },
+
+    ];
+
+    // ============================================================
+    // 3. ШАРҲҲО
+    // ============================================================
+    const REVIEWS = [
+      { name: 'Азиза М.', text: 'Люстраи Modern Ring-ро фармоиш додам — воқеан олиҷаноб! Зуд расониданд, ба таври хуб бастабандӣ шудааст. Нур гарм ва бароҳат аст.', rating: 5 },
+      { name: 'Далер К.', text: 'Мағозаи олӣ. Ба ман дар интихоби рӯшноӣ барои тамоми хона кӯмак карданд. Машварат дар сатҳи олӣ.', rating: 5 },
+      { name: 'Мадина Р.', text: 'Лентаи LED ва бра харидам. Ҳама кор мекунад, сифат хуб аст. Расонидан каме дер шуд, аммо пешакӣ огоҳ карданд.', rating: 4 },
+      { name: 'Фирдавс Ш.', text: 'Муносибати касбӣ. Ҳар як лампаро пеш аз фиристодан санҷиданд. Тавсия медиҳам!', rating: 5 },
+    ];
+
+    // ============================================================
+    // 4. ҲОЛАТИ БАРНОМА
+    // ============================================================
+    let cart = JSON.parse(localStorage.getItem('korvonCart')) || [];
+    let currentCategory = 'all';
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let selectedItem = null;
+    let selectedQty = 1;
+
+    // DOM элементҳо
+    const productsGrid = document.getElementById('productsGrid');
+    const categoriesContainer = document.getElementById('categoriesContainer');
+    const searchInput = document.getElementById('searchInput');
+    const cartPanel = document.getElementById('cartPanel');
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartCount = document.getElementById('cartCount');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalTotal = document.getElementById('modalTotal');
+    const qtyValue = document.getElementById('qtyValue');
+    const qtyMinus = document.getElementById('qtyMinus');
+    const qtyPlus = document.getElementById('qtyPlus');
+    const orderWhatsApp = document.getElementById('orderWhatsApp');
+    const orderTelegram = document.getElementById('orderTelegram');
+    const themeToggle = document.getElementById('themeToggle');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const cartIcon = document.getElementById('cartIcon');
+    const cartClose = document.getElementById('cartClose');
+
+    // ============================================================
+    // 5. ФУНКСИЯҲО
+    // ============================================================
+
+    // --- Мавзӯъ ---
+    function initTheme() {
+      const saved = localStorage.getItem('korvonTheme');
+      if (saved === 'light') {
+        document.body.classList.add('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        document.body.classList.remove('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    }
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('korvonTheme', isLight ? 'light' : 'dark');
+      themeToggle.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+
+    // --- Тамосҳо ---
+    function initContacts() {
+      const links = {
+        instagram: CONFIG.instagram,
+        telegram: CONFIG.telegram,
+        whatsapp: CONFIG.whatsapp,
+        phone: 'tel:' + CONFIG.phone,
+      };
+      document.querySelectorAll('[id*="instagram"]').forEach(el => el.href = links.instagram);
+      document.querySelectorAll('[id*="telegram"]').forEach(el => el.href = links.telegram);
+      document.querySelectorAll('[id*="whatsapp"]').forEach(el => el.href = links.whatsapp);
+      document.querySelectorAll('[id*="phone"]').forEach(el => el.href = links.phone);
+      const contactPhone = document.getElementById('contact-phone');
+      if (contactPhone) {
+        contactPhone.href = 'tel:' + CONFIG.phone;
+        contactPhone.textContent = CONFIG.phoneDisplay;
+      }
+    }
+
+    // --- Категорияҳо ---
+    function renderCategories() {
+      const cats = [
+        { id: 'all', name: 'Ҳама' },
+        { id: 'chandeliers', name: 'Люстраҳо' },
+        { id: 'ceiling', name: 'Чарогиҳои шифтӣ' },
+        { id: 'shades', name: 'Плафонҳо' },
+        { id: 'spot', name: 'Нуқтагӣ' },
+        { id: 'led', name: 'LED' },
+        { id: 'bulbs', name: 'Лампочкаҳо' },
+        { id: 'sconces', name: 'Бра' },
+        { id: 'floor', name: 'Торшерҳо' },
+        { id: 'table', name: 'Мизи корӣ' },
+        { id: 'strips', name: 'Лентаҳои LED' },
+        { id: 'flood', name: 'Прожекторҳо' },
+        { id: 'track', name: 'Трекӣ' },
+      ];
+      categoriesContainer.innerHTML = cats.map(c =>
+        `<button class="cat-btn ${c.id === 'all' ? 'active' : ''}" data-cat="${c.id}">${c.name}</button>`
+      ).join('');
+      categoriesContainer.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoriesContainer.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.dataset.cat;
+          renderProducts();
+        });
+      });
+    }
+
+    // --- Филтрҳо ---
+    function initFilters() {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.filter;
+          renderProducts();
+        });
+      });
+    }
+
+    // --- Ҷустуҷӯ ---
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      renderProducts();
+    });
+
+    // --- Филтркунонии молҳо ---
+    function getFilteredItems() {
+      return PRODUCTS.filter(item => {
+        if (currentCategory !== 'all' && item.category !== currentCategory) return false;
+        if (currentFilter === 'popular' && !item.popular) return false;
+        if (currentFilter === 'new' && !item.new) return false;
+        if (currentFilter === 'cheap' && item.price > 400) return false;
+        if (searchQuery) {
+          const inName = item.name.toLowerCase().includes(searchQuery);
+          const inDesc = item.description.toLowerCase().includes(searchQuery);
+          if (!inName && !inDesc) return false;
+        }
+        return true;
+      });
+    }
+
+    // --- Рендери молҳо ---
+    function renderProducts() {
+      const items = getFilteredItems();
+      if (items.length === 0) {
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-secondary);">Чизе ёфт нашуд</p>';
+        return;
+      }
+      productsGrid.innerHTML = items.map(item => {
+        const badge = item.popular ? '<span class="badge badge-hit">Хит</span>' : (item.new ? '<span class="badge">Нав</span>' : '');
+        const imgSrc = item.image || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%232a2a2a"/%3E%3Ctext x="50%25" y="50%25" font-family="sans-serif" font-size="14" fill="%23666" text-anchor="middle" dy=".3em"%3EСУРАТ%3C/text%3E%3C/svg%3E';
+        return `
+          <article class="product-card">
+            <div class="product-img">
+              <img src="${imgSrc}" alt="${item.name}" loading="lazy">
+              ${badge}
+            </div>
+            <div class="product-body">
+              <h3>${item.name}</h3>
+              <p class="product-desc">${item.description}</p>
+              <div class="product-price">
+                <span>
+                  <span class="price">${item.price} сомонӣ</span>
+                  ${item.oldPrice ? `<span class="price-old">${item.oldPrice}</span>` : ''}
+                </span>
+                <button class="order-btn" data-id="${item.id}">Фармоиш</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      productsGrid.querySelectorAll('.order-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = parseInt(e.target.dataset.id);
+          openOrderModal(id);
+        });
+      });
+    }
+
+    // --- Кушодани модал ---
+    function openOrderModal(id) {
+      const item = PRODUCTS.find(i => i.id === id);
+      if (!item) return;
+      selectedItem = item;
+      selectedQty = 1;
+      qtyValue.textContent = selectedQty;
+      const imgSrc = item.image || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect width="400" height="300" fill="%232a2a2a"/%3E%3Ctext x="50%25" y="50%25" font-family="sans-serif" font-size="14" fill="%23666" text-anchor="middle" dy=".3em"%3EСУРАТ%3C/text%3E%3C/svg%3E';
+      modalImg.src = imgSrc;
+      modalImg.alt = item.name;
+      modalTitle.textContent = item.name;
+      modalPrice.textContent = item.price + ' сомонӣ';
+      updateModalTotal();
+      modalOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateModalTotal() {
+      if (!selectedItem) return;
+      const total = selectedItem.price * selectedQty;
+      modalTotal.textContent = `Ҳамагӣ: ${total} сомонӣ`;
+    }
+
+    qtyMinus.addEventListener('click', () => {
+      if (selectedQty > 1) {
+        selectedQty--;
+        qtyValue.textContent = selectedQty;
+        updateModalTotal();
+      }
+    });
+
+    qtyPlus.addEventListener('click', () => {
+      selectedQty++;
+      qtyValue.textContent = selectedQty;
+      updateModalTotal();
+    });
+
+    modalClose.addEventListener('click', () => {
+      modalOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+      selectedItem = null;
+    });
+
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+        selectedItem = null;
+      }
+    });
+
+    // --- Паёми фармоиш ---
+    function getOrderMessage(item, qty) {
+      const total = item.price * qty;
+      return `Салом! Мехоҳам фармоиш диҳам:\n${item.name} — ${qty} адад\nНарх: ${total} сомонӣ\n\nСуроға: ${CONFIG.address}`;
+    }
+
+    orderWhatsApp.addEventListener('click', () => {
+      if (!selectedItem) return;
+      const msg = getOrderMessage(selectedItem, selectedQty);
+      const url = `${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+
+    orderTelegram.addEventListener('click', () => {
+      if (!selectedItem) return;
+      const msg = getOrderMessage(selectedItem, selectedQty);
+      const url = `https://t.me/share/url?url=${encodeURIComponent(CONFIG.telegram)}&text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+
+    // --- Сабад ---
+    function saveCart() {
+      localStorage.setItem('korvonCart', JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p style="text-align:center;color:var(--text-secondary);">Сабад холӣ аст</p>';
+        cartTotal.textContent = '0 сомонӣ';
+        return;
+      }
+      cartItems.innerHTML = cart.map(item => {
+        const imgSrc = item.image || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"%3E%3Crect width="70" height="70" fill="%232a2a2a"/%3E%3Ctext x="50%25" y="50%25" font-family="sans-serif" font-size="10" fill="%23666" text-anchor="middle" dy=".3em"%3EСУРАТ%3C/text%3E%3C/svg%3E';
+        return `
+          <div class="cart-item" data-id="${item.id}">
+            <img src="${imgSrc}" alt="${item.name}" class="cart-item-img">
+            <div class="cart-item-info">
+              <h4>${item.name}</h4>
+              <div class="cart-item-price">${item.price} сомонӣ</div>
+              <div class="cart-item-actions">
+                <button class="cart-qty-minus" data-id="${item.id}">−</button>
+                <span>${item.qty}</span>
+                <button class="cart-qty-plus" data-id="${item.id}">+</button>
+                <span class="cart-item-remove" data-id="${item.id}"><i class="fas fa-trash-alt"></i></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      cartTotal.textContent = total + ' сомонӣ';
+
+      cartItems.querySelectorAll('.cart-qty-minus').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = parseInt(e.target.dataset.id);
+          const item = cart.find(c => c.id === id);
+          if (item && item.qty > 1) {
+            item.qty--;
+            saveCart();
+            renderCart();
+            updateCartCount();
+          }
+        });
+      });
+
+      cartItems.querySelectorAll('.cart-qty-plus').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = parseInt(e.target.dataset.id);
+          const item = cart.find(c => c.id === id);
+          if (item) {
+            item.qty++;
+            saveCart();
+            renderCart();
+            updateCartCount();
+          }
+        });
+      });
+
+      cartItems.querySelectorAll('.cart-item-remove').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = parseInt(e.target.closest('.cart-item-remove').dataset.id);
+          cart = cart.filter(c => c.id !== id);
+          saveCart();
+          renderCart();
+          updateCartCount();
+        });
+      });
+    }
+
+    function updateCartCount() {
+      const count = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCount.textContent = count;
+      cartCount.style.display = count > 0 ? 'flex' : 'none';
+    }
+
+    cartIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      cartPanel.classList.toggle('open');
+    });
+
+    cartClose.addEventListener('click', () => {
+      cartPanel.classList.remove('open');
+    });
+
+    // --- Тасдиқи фармоиш аз сабад ---
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Сабад холӣ аст');
+        return;
+      }
+      const itemsList = cart.map(item => `${item.name} — ${item.qty} адад`).join('\n');
+      const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const msg = `Салом! Мехоҳам фармоиш диҳам:\n${itemsList}\n\nҲамагӣ: ${total} сомонӣ\nСуроға: ${CONFIG.address}`;
+      window.open(`${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+
+    // --- Шарҳҳо ---
+    function renderReviews() {
+      const slider = document.getElementById('reviewsSlider');
+      slider.innerHTML = REVIEWS.map(r => `
+        <div class="review-card">
+          <div class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+          <p class="review-text">"${r.text}"</p>
+          <div class="review-name">${r.name}</div>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('prevReview').addEventListener('click', () => {
+      const slider = document.getElementById('reviewsSlider');
+      slider.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    document.getElementById('nextReview').addEventListener('click', () => {
+      const slider = document.getElementById('reviewsSlider');
+      slider.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
+    // --- Менюи мобайл ---
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // --- Тугмаҳои фармоиш ---
+    document.getElementById('heroOrderBtn').addEventListener('click', () => {
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('deliveryOrderBtn').addEventListener('click', () => {
+      document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('promoOrderBtn').addEventListener('click', () => {
+      const promoItem = {
+        id: 999,
+        name: 'Аксия: Люстра + лампаи LED тӯҳфа',
+        description: 'Пешниҳоди махсус',
+        price: 1999,
+        image: 'IMAGE_PROMO_HERE',
+        qty: 1,
+      };
+      const existing = cart.find(c => c.id === 999);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push(promoItem);
+      }
+      saveCart();
+      renderCart();
+      updateCartCount();
+      cartPanel.classList.add('open');
+    });
+
+    // --- Тугмаи Instagram ---
+    document.getElementById('instaBtn').href = CONFIG.instagram;
+
+    // --- Логотип ---
+    document.querySelectorAll('.logo').forEach(el => {
+      if (el.tagName === 'A' || el.tagName === 'H4') {
+        el.innerHTML = 'KORVON <span>LUSTRA</span>';
+      }
+    });
+
+    // --- Оғоз ---
+    function init() {
+      initTheme();
+      initContacts();
+      renderCategories();
+      initFilters();
+      renderProducts();
+      renderReviews();
+      renderCart();
+      updateCartCount();
+
+      const footerLinks = {
+        instagram: CONFIG.instagram,
+        telegram: CONFIG.telegram,
+        whatsapp: CONFIG.whatsapp,
+        phone: 'tel:' + CONFIG.phone,
+      };
+      document.querySelectorAll('footer a[id*="instagram"]').forEach(el => el.href = footerLinks.instagram);
+      document.querySelectorAll('footer a[id*="telegram"]').forEach(el => el.href = footerLinks.telegram);
+      document.querySelectorAll('footer a[id*="whatsapp"]').forEach(el => el.href = footerLinks.whatsapp);
+      document.querySelectorAll('footer a[id*="phone"]').forEach(el => el.href = footerLinks.phone);
+    }
+
+    init();
+
+    // --- Пӯшидани сабад бо клик берун ---
+    document.addEventListener('click', (e) => {
+      if (cartPanel.classList.contains('open') && !cartPanel.contains(e.target) && !cartIcon.contains(e.target)) {
+        cartPanel.classList.remove('open');
+      }
+    });
+
+    // --- Идоракунӣ бо клавиатура ---
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (modalOverlay.classList.contains('open')) {
+          modalOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+          selectedItem = null;
+        }
+        if (cartPanel.classList.contains('open')) {
+          cartPanel.classList.remove('open');
+        }
+        if (mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
